@@ -3,11 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>Fellowship Data</title>
+  <style>
+    /* Simple menu styling */
+    .menu {
+      background-color: #333;
+      padding: 10px;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+      font-weight: bold;
+    }
+    .menu a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <h1>Fellowship Participants</h1>
-  <pre id="output">Loading...</pre>
+<!-- Navigation Menu -->
+  <div class="menu">
+    index.htmlHome</a>
+    about.htmlAbout</a>
+    table.htmlFellows</a>
+    apply.htmlApply</a>
+    contact.htmlContact</a>
+  </div>
 
+  <h1>Welcome to the Fellowship</h1>
+
+  <div id="table-container">Loading...</div>
   <script>
     fetch('data.txt')
       .then(response => response.text())
