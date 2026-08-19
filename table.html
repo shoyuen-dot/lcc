@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fellowship CSV Demo</title>
+</head>
+<body>
+  <h1>Fellowship Members (CSV Data)</h1>
+  <div id="table-container">Loading...</div>
+
+  <script>
+    // Fetch CSV file
+    fetch('data.csv')
+      .then(response => response.text())
+      .then(csv => {
+        const rows = csv.trim().split('\n');   // Split lines
+        const header = rows[0].split(',');     // First line = headers
+
+        // Build HTML table
+        let table = '<table border="1"><tr>';
+        header.forEach(h => table += '<th>' + h + '</th>');
+        table += '</tr>';
+
+        // Loop through each row
+        for (let i = 1; i < rows.length; i++) {
+          const cols = rows[i].split(',');
+          table += '<tr>';
+          cols.forEach(c => table += '<td>' + c + '</td>');
+          table += '</tr>';
+        }
+
+        table += '</table>';
+
+        // Display table
+        document.getElementById('table-container').innerHTML = table;
+      })
+      .catch(error => {
+        document.getElementById('table-container').innerHTML = 'Error loading CSV.';
+        console.error(error);
+      });
+  </script>
+</body>
+</html>
