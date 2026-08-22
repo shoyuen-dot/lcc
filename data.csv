@@ -1,4 +1,4 @@
-Name,Role
-Alice,Fellow
-Bob,Fellow
-Charlie,Coordinator
+Event Date, Image, Description
+08/01/2026, event1.png, Event 1
+08/02/2026, default.png, Event 2
+08/03/2026, default.png, Event 3
