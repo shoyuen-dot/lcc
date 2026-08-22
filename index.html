@@ -66,6 +66,7 @@
       max-height: 500px;
       overflow: hidden;
       border-radius: 8px;
+      margin-bottom: 30px;
     }
 
     .hero-image {
@@ -73,6 +74,36 @@
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+
+    /* Buttons Section */
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background-color: #1a365d;
+      color: #ffffff;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #2b4c7e;
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
     }
 
     /* Footer */
@@ -89,15 +120,23 @@
 
   <!-- Header with Logo -->
   <header>
-    <img src="LCC_Logo.png" alt="Logo" class="logo">
+    <img src="https://via.placeholder.com/200x70?text=Logo" alt="Logo" class="logo">
   </header>
 
   <!-- Middle Content -->
   <main>
     <div class="hero-container">
       <h1 class="slogan">Chinese Evangelism Resource Tool</h1>
+      
       <div class="hero-image-wrapper">
-        <img src="banner.png" alt="Bible Sharing" class="hero-image">
+        <img src="https://via.placeholder.com/800x450?text=Bible+Sharing+Image" alt="Bible Sharing" class="hero-image">
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="button-group">
+        <button class="btn">Events</button>
+        <button class="btn">Sharing</button>
+        <button class="btn">Resource Tool</button>
       </div>
     </div>
   </main>
